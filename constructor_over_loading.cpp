@@ -35,4 +35,16 @@ Mahasiswa::Mahasiswa( int iNim, string iNama)
 }
 
 void Mahasiswa::cetak()
-{}
+{
+    cout << endl << "NIM : " << nim << endl;
+    cout << endl << "Nama : " << nama << endl;
+}
+
+int main()
+{
+    Mahasiswa mhs1(1234567890);
+    Mahasiswa mhs2("Rani");
+    Mahasiswa mhs3(1234567890, "Rani");
+
+    return 0;
+}
