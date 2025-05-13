@@ -7,7 +7,7 @@ class Mahasiswa
 private:
     int nim;
     string nama;
-public:
+public:                                 //Banyak constructor yang berbeda-beda
     Mahasiswa();
     Mahasiswa(int);
     Mahasiswa(string);
@@ -16,7 +16,7 @@ public:
     void cetak();
 };
 
-Mahasiswa::Mahasiswa(){}
+Mahasiswa::Mahasiswa(){}                        //Banyak parameter yang berbeda menyesuaikan constructor
 
 Mahasiswa::Mahasiswa(int iNim)
 {
@@ -42,9 +42,13 @@ void Mahasiswa::cetak()
 
 int main()
 {
-    Mahasiswa mhs1(1234567890);
-    Mahasiswa mhs2("Rani");
-    Mahasiswa mhs3(1234567890, "Rani");
+    Mahasiswa mhs1(1234567890);             //hanya nim
+    Mahasiswa mhs2("Rani");                 //hanya nama
+    Mahasiswa mhs3(1234567890, "Rani");     //nim & nama
+
+    cout << "Mahasiswa 1 : "; mhs1.cetak();
+    cout << "Mahasiswa 2 : "; mhs2.cetak();
+    cout << "Mahasiswa 3 : "; mhs3.cetak();
 
     return 0;
 }

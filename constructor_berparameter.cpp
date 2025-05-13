@@ -5,7 +5,7 @@ using namespace std;
 class Mahasiswa
 {
 public:
-    Mahasiswa(int nim, string nama);
+    Mahasiswa(int nim, string nama);    //Constructor dengan Parameter
 };
 
 Mahasiswa::Mahasiswa(int nim, string nama)
@@ -17,6 +17,6 @@ Mahasiswa::Mahasiswa(int nim, string nama)
 
 int main()
 {
-    Mahasiswa mhs(123, "Rani");
+    Mahasiswa mhs(123, "Rani");     //Memanggil constructor dengan parameter
     return 0;
 }
