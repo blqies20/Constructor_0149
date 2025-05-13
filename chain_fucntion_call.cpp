@@ -9,7 +9,7 @@ class Buku
     Buku setJudul(string judul)
     {
         this -> judul = judul;
-        return *this;
+        return *this;               //chain fucntion
     }
     string getJudul()
     {
@@ -17,6 +17,7 @@ class Buku
     }
 };
 
+//chain fucntion calls
 int main()
 {
     Buku bukunya;
