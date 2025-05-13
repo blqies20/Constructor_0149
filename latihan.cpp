@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-class PersegiPanjang; 
+class PersegiPanjang; // Deklarasi awal class PersegiPanjang
 
 class BangunDatar
 {
@@ -25,7 +25,7 @@ private:
     int lebar;
 
 public:
-    PersegiPanjang() : panjang(0), lebar(0) {} 
+    PersegiPanjang() : panjang(0), lebar(0) {} // Konstruktor default
 
     void input()
     {
@@ -45,18 +45,21 @@ public:
         return 2 * (panjang + lebar);
     }
 
+    // Deklarasi friend function
     friend int hitungLuas(const PersegiPanjang* Pp);
     friend int hitungKeliling(const PersegiPanjang* Pp);
 };
 
+// Definisi friend function untuk menghitung luas
 int hitungLuas(const PersegiPanjang* Pp)
 {
-    return Pp->luasPp();
+    return Pp->luasPp(); // Mengakses method luasPp() menggunakan pointer
 }
 
+// Definisi friend function untuk menghitung keliling
 int hitungKeliling(const PersegiPanjang* Pp)
 {
-    return Pp->kelilingPp();
+    return Pp->kelilingPp(); // Mengakses method kelilingPp() menggunakan pointer
 }
 
 int main()
@@ -65,12 +68,14 @@ int main()
     objekPp.input();
     cout << endl;
 
+    // Menggunakan friend function untuk menghitung luas dan keliling
     cout << "Menggunakan Friend Function" << endl;
     cout << "Luas Persegi Panjang : " << hitungLuas(&objekPp) << endl;
     cout << "Keliling Persegi Panjang : " << hitungKeliling(&objekPp) << endl;
 
     cout << endl;
 
+    // Tetap bisa menggunakan method langsung dari objek
     cout << "Menggunakan Objek" << endl;
     cout << "Luas Persegi Panjang : " << objekPp.luasPp() << endl;
     cout << "Keliling Persegi Panjang : " << objekPp.kelilingPp() << endl;

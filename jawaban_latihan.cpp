@@ -10,7 +10,7 @@ public:
     int hitungKeliling ( int panjang, int lebar);
 };
 
-class PersegiPanjang
+class PersegiPanjang //Constructor
 {
     public:
     int panjang, lebar;
@@ -19,6 +19,7 @@ class PersegiPanjang
     friend int BangunDatar::hitungKeliling(int panjang, int lebar);
 };
 
+//Friend Fucntion
 int BangunDatar::hitungLuas(int p, int l)
 {
     return p * l;
