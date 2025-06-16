@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <iomanip>
 using namespace std;
 
 class Dosen;
@@ -82,3 +83,22 @@ public:
         return s->gaji;
     }
 };
+
+int main() {
+    Mahasiswa mhs("Rani", "123456");
+    Dosen dsn("Dr. Budi", "D001", "Lektor", 9500000);
+    Staff stf("Pak Arif", "STF01", 5500000);
+
+    dsn.beriNilai(&mhs, 87.6);
+    mhs.tampil();
+
+    dsn.tampil();
+    stf.ubahPangkat(&dsn, "Guru Besar");
+    dsn.tampil();
+
+    cout << fixed << setprecision(0);
+    cout << "Gaji Dosen (akses Universitas): " << Universitas::lihatGajiDosen(&dsn) << endl;
+    cout << "Gaji Staff (akses Universitas): " << Universitas::lihatGajiStaff(&stf) << endl;
+
+    return 0;
+}
