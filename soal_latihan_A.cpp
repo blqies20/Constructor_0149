@@ -22,3 +22,19 @@ class Mahasiswa {
         }
         friend class Dosen;
 };
+
+class Dosen {
+    private:
+        string pangkat;
+        double gaji;
+    public:
+        string nama;
+        string nidn;
+
+        Dosen(string iNama, string iNidn, string iPangkat, double iGaji) {
+            nama = iNama;
+            nidn = iNidn;
+            pangkat = iPangkat;
+            gaji = iGaji;
+        }
+};
