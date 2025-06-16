@@ -49,7 +49,6 @@ class Dosen {
 
         friend class Staff;
         friend class Universitas;
-        friend double lihatGajiDosen(Dosen* d);
 };
 
 class Staff {
@@ -66,9 +65,20 @@ class Staff {
         gaji = iGaji;
     }
 
-    void ubahPagkat(Dosen* d, string pangkatBaru) {
+    void ubahPangkat(Dosen* d, string pangkatBaru) {
         d->pangkat = pangkatBaru;
     }
 
-    friend double lihatGajiStaff(Staff* s);
+    friend class Universitas;
+};
+
+class Universitas {
+public:
+    static double lihatGajiDosen(Dosen* d) {
+        return d->gaji;
+    }
+
+    static double lihatGajiStaff(Staff* s) {
+        return s->gaji;
+    }
 };
