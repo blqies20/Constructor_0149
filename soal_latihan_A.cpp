@@ -51,3 +51,24 @@ class Dosen {
         friend class Universitas;
         friend double lihatGajiDosen(Dosen* d);
 };
+
+class Staff {
+    private:
+        double gaji;
+
+    public:
+    string nama;
+    string id;
+
+    Staff(string iNama, string iId, double iGaji) {
+        nama = iNama;
+        id = iId;
+        gaji = iGaji;
+    }
+
+    void ubahPagkat(Dosen* d, string pangkatBaru) {
+        d->pangkat = pangkatBaru;
+    }
+
+    friend double lihatGajiStaff(Staff* s);
+};
