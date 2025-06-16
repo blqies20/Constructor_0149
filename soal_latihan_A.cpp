@@ -2,6 +2,8 @@
 #include <string>
 using namespace std;
 
+class Dosen;
+
 class Mahasiswa {
     private:
         float nilai;
@@ -14,4 +16,9 @@ class Mahasiswa {
             nim = iNim;
             nilai = 0.0;
         }
+
+        void tampil() {
+            cout << "Mahasiswa: " << nama << "("<< nim <<"), Nilai: " << nilai << endl;
+        }
+        friend class Dosen;
 };
