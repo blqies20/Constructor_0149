@@ -3,6 +3,7 @@
 using namespace std;
 
 class Dosen;
+class Staff;
 
 class Mahasiswa {
     private:
@@ -37,4 +38,16 @@ class Dosen {
             pangkat = iPangkat;
             gaji = iGaji;
         }
+
+        void beriNilai(Mahasiswa* m, float nilai) {
+            m->nilai = nilai;
+        }
+
+        void tampil() {
+            cout << "Dosen: " << nama << "("<< nidn <<"), Pangkat: " << pangkat << endl;
+        }
+
+        friend class Staff;
+        friend class Universitas;
+        friend double lihatGajiDosen(Dosen* d);
 };
